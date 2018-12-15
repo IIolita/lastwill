@@ -1,3 +1,7 @@
+<div class="container">
+  <div class="sub">
+    <header><h1>Подписки</h1></header>
+
 <%= form_with(model: subscription, local: true) do |form| %>
   <% if subscription.errors.any? %>
     <div id="error_explanation">
@@ -11,17 +15,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <h2>Введите URL</h2>
+  <%= form.text_field :attr, placeholder: "www.site.ru" %>
   </div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+  <div class="login">
+  <h2>Введите данные</h2>
+  <%= form.text_field :attr, placeholder: "Логин" %>
+  </div>
+
+  <div class="password">
+  <%= form.text_field :attr, placeholder: "Пароль" %>
+  </div>
+
+  <div class="body">
+  <h2>Добавьте комментарий</h2>
+  <%= form.text_area :attr, placeholder: "Напишите..." %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+  <h2>Выберите получателя</h2>
+  <%= form.text_field :attr, placeholder: "Перетащите из списка" %>
   </div>
-<% end %>
+
+  <div class="actions">
+  <%= form.submit 'Сохранить' %>
+  </div>
+  <% end %>
+
+</div>
+  </div>
