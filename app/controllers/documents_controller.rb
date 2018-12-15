@@ -3,10 +3,10 @@ class DocumentsController < ApplicationController
 
   # GET /documents
   # GET /documents.json
-  def index
-    @documents = Document.all
-    @instructions = Instruction.all
-  end
+    def index
+     @documents = Document.all
+     @instructions = Instruction.all
+    end
 
   # GET /documents/1
   # GET /documents/1.json

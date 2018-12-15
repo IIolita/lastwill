@@ -1,0 +1,60 @@
+.container {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.wallets {
+  display: inline-block;
+
+}
+
+header {
+  margin-bottom: 70px;
+  color: #656565;
+}
+
+h2 {
+  color: #656565;
+}
+
+input[type=submit] {
+  background-color: #549ffd;
+  height: 30px;
+  width: 177px;
+  border: none;
+  border-radius: 7px;
+  color: white;
+
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+textarea {
+  font-family: sans-serif;
+  text-decoration-color: #dfdede;
+  height: 180px;
+  width: 550px;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  background-color: inherit;
+}
+
+input[type=text] {
+  text-decoration: #dfdede;
+  height: 50px;
+  width: 550px;
+  padding: 12px;
+  margin-bottom: 50px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  background-color: inherit;
+}

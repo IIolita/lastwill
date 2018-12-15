@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_25_210144) do
+ActiveRecord::Schema.define(version: 2018_12_09_104834) do
 
   create_table "account_transfers", force: :cascade do |t|
     t.integer "transmitter_id"
@@ -47,8 +47,24 @@ ActiveRecord::Schema.define(version: 2018_11_25_210144) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "subscriptions", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "login"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "wallets", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

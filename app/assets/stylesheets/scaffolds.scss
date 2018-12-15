@@ -1,11 +1,11 @@
 body {
-  font-family: PragmaticaLightC;
+  font-family: 'Pragmatica Cyrillic', arial;
   height: 100%;
   margin: auto;
 }
 
 p, td {
-  font-family: PragmaticaLightC;
+  font-family: 'PragmaticaLightC';
   font-size: 14px;
   line-height: 19px;
 }
@@ -13,7 +13,6 @@ p, td {
 td {
   color: rgba(0, 0, 0, 0.5);
 }
-
 
 pre {
   background-color: #eee;
@@ -32,22 +31,9 @@ a {
   }
 }
 
-// th {
-//   padding-bottom: 5px;
-// }
-//
-// td {
-//   padding: 0 5px 7px;
-// }
-
-// div {
-//   &.field, &.actions {
-//     margin-bottom: 10px;
-//   }
-// }
-
 #notice {
   color: green;
+  margin-left: 30px;
 }
 
 .field_with_errors {
@@ -63,9 +49,9 @@ a {
   margin-bottom: 20px;
   background-color: #f0f0f0;
 
-
   ul li {
     font-size: 12px;
+
     list-style: square;
   }
 }
@@ -74,11 +60,9 @@ label {
   display: block;
 }
 
-
 h1 {
   font-weight: bold;
   font-size: 28px;
-
 }
 
 h2 {
@@ -91,14 +75,12 @@ h2 {
    font-weight: lighter;
  }
 
-
  .section_header {
    margin-left: 30px;
  }
 
 .main {
   width: 838px;
-  height: 100vh;
   padding-left: 280px;
   padding-top: 105px;
 }
@@ -110,7 +92,6 @@ h2 {
   display: flex;
   flex-wrap: wrap;
 }
-
 
 .card {
   width: 206px;
@@ -125,12 +106,6 @@ h2 {
   min-width: 0%
 }
 
-
- .card a {
-  color: rgba(0, 0, 0, 0);
-}
-
-
 .card_new {
   height: 100%;
   width: 100%;
@@ -139,33 +114,33 @@ h2 {
   position: absolute;
 }
 
+.card_new a, .edit a, .delete a {
+ height: 100%;
+ width: 100%;
+ z-index: 1;
+ display: block;
+}
+
 .add {
   height: 35px;
   width: 35px;
-  background-image:
-  url(https://psv4.userapi.com/c848424/u138424346/docs/d7/a83941c75bc6/add_Montazhnaya_oblast_1.png?extra=_w5TbvoFz_C_8Yp-S-b2i24NMA_Qdd149wSRMN_Wa1MGYqO7axPPuvOuVSfBc5wnFI7e1ZLyeqG6ohTrdYQ9da-cZhhQ752z20BJ5QtJeBTDlgVByz0IaYDfbwno9yZ7oW2YgbWWq9H3h6TFmL1fhPjM);
+  background-image: image_url('add.png');
   background-size: cover;
   margin-left: 50%;
   transform: translateX(-50%);
   margin-top: 45px;
-
 }
-
- //  .card:first-of-type {
- //    margin-left: 0px;
- // }
 
 .delete {
   width: 20px;
   height: 20px;
   margin-top: -5px;
+  background-image: image_url('delete.png');
   background-size: cover;
   margin-left: 195px;
   position: absolute;
-  background-image: url(https://psv4.userapi.com/c848424/u138424346/docs/d17/a13f566ad2fb/udalit_Montazhnaya_oblast_1.png?extra=TAZDxy1aiFWR-seYEPDwpqhYmeSrMhPDeynQqjrSCHMFkGsFxjzbVg3vpdJBz-UxiBewAuUs9url5DsqV2AQWnLu7AY8UYkbFtc3YYSvTdvmPmaN56_njbeuS0JgUrTwFT2OoXGMuy-FR5V_FzelD3b7);
   display: none;
 }
-
 
 .edit {
   width: 20px;
@@ -173,12 +148,10 @@ h2 {
   margin-top: 15px;
   margin-left: 195px;
   position: absolute;
-  background-image:
-  url(https://psv4.userapi.com/c848424/u138424346/docs/d9/b2eed62c365f/edit.png?extra=KHx3Bx43ZeUktFEuRhLK3kE4WCH4-RkGb5CMfoVo6vBG6qRnFFPCutLnR4wQ0pf87Y7b_dVLGd_K0Q5YCjA3VJlPzDrctQe1sp_kP4Lii3IpSbPbqphiGvYGOtkO00C5AhEfwJocE4XQe1ZXeI_JczdA);
+  background-image: image_url('edit.png');
   background-size: cover;
   display: none;
 }
-
 
 .card:hover .edit {
   display:block;
@@ -193,24 +166,24 @@ h2 {
 }
 
 .previev {
-  width: 175px;
-  height: 99px;
-  position: absolute;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  width: 348px;
+  height: 122px;
+  /* position: absolute; */
+  /* margin-left: 50%; */
+  border-radius: -2%;
+  /* transform: translateX(-50%); */
   margin-top: -3px;
   background-size: cover;
-  background-image: url(https://psv4.userapi.com/c848424/u138424346/docs/d17/a83056d1fae8/preview-01.png?extra=iHiKhPuuS2LhqtI6lR8TiefAFI5D6uL0qroZ8XflFpWPACrrVPSJUifGtdqOYS6rg0QArl7mVoSpLVIIniy7tE9t3-5iBb8gU1yEMX-mPP8-l9opNrFGctYHc2osDPtBXHmJB1QqfYih_l7nkvY2f3M);
+  background-image: image_url('preview.png');
+  margin-top: -21px;
+  margin-left: -12px;
 }
-
 
 .card_title {
   margin-top: 80px;
   margin-left: 20px;
   position: absolute;
-
 }
-
 
 .card_title h2 {
   font-family: Pragmatica;
@@ -220,3 +193,44 @@ h2 {
   margin-top: 40px;
   width: 800px;
 }
+
+// 
+//
+//
+//
+//
+//
+//
+// textarea {
+//   width: 609px;
+//   height: 30px;
+//   resize: none;
+//   border-style: solid;
+//   border-radius: 5px;
+//   border-color: #979797;
+//   font-size: 15px;
+//   padding-left: 10px;
+//   padding-top: 10px;
+// }
+//
+// .data_output {
+//   line-height: 30px;
+//   margin-top: 50px;
+// }
+//
+//
+//
+//
+// .network_choice {
+//   width: 609px;
+//   height: 30px;
+//   border-radius: unset;
+//   background-color: white;
+//   font-size: 15px;
+// }
+//
+//
+// .js-example-basic-multiple {
+//   width: 609px;
+//   height: 30px;
+// }

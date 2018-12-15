@@ -1,56 +1,32 @@
 
 <section class="main">
 
-    <p id="notice"><%= notice %></p>
-    <h1 class="section_header">Наставления</h1>
+  <p id="notice"><%= notice %></p>
+  <h1 class="section_header">Наставления</h1>
 
-    <section class="cards_area">
+  <section class="cards_area">
+    <% @instructions.each do |instruction| %>
+      <div class="card">
+        <div class="previev"></div>
+        <div class="card_title">
+          <h3><%= instruction.title %></h3>
+        </div>
+        <%#= link_to 'Открыть', instruction %>
+        <div class="edit">
+          <%= link_to '', edit_instruction_path(instruction) %>
+        </div>
+        <div class="delete">
+          <%= link_to '', instruction, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    <% end %>
 
-
-          <!-- <thead>
-            <tr>
-              <th></th>
-              <th></th>
-              <th colspan="3"></th>
-            </tr>
-          </thead> -->
-
-
-          <tbody>
-            <% @instructions.each do |instruction| %>
-
-            <div class="card">
-
-                <div class="previev">
-                </div>
-
-                <div class="card_title">
-                  <h3><%= instruction.title %></h3>
-                </div>
-
-                <td><%#= link_to 'Открыть', instruction %></td>
-
-                <div class="edit">
-                  <td><%= link_to 'Из', edit_instruction_path(instruction) %></td>
-                </div>
-
-                <div class="delete">
-                  <td><%= link_to 'Уд', instruction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                </div>
-
-            </div>
-
-            <% end %>
-          </tbody>
-
-            <div class="card">
-              <div class="card_new">
-                <%= link_to 'Новый документ Новый документ Новый документ Новый документНовый документНовый документНовый документНовый документНовый документНовый документ Новый документ Новый документНовый документ', new_instruction_path %>
-              </div>
-
-              <div class="add">
-              </div>
-            </div>
-
-    </section>
+    <div class="card">
+      <div class="card_new">
+        <%= link_to '', new_instruction_path %>
+      </div>
+      <div class="add">
+      </div>
+    </div>
+  </section>
 </section>

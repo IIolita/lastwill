@@ -1,55 +1,31 @@
 <section class="main">
 
-    <p id="notice"><%= notice %></p>
-    <h1 class="section_header">Аккаунты</h1>
+  <p id="notice"><%= notice %></p>
+  <h1 class="section_header">Аккаунты</h1>
 
-    <section class="cards_area">
+  <section class="cards_area">
+    <% @social_accounts.each do |social_account| %>
+      <div class="card">
+        <div class="previev"></div>
+        <div class="card_title">
+          <h3><%= social_account.title %></h3>
+        </div>
+        <%#= link_to 'Открыть', social_account %>
+        <div class="edit">
+          <%= link_to '', edit_social_account_path(social_account) %>
+        </div>
+        <div class="delete">
+          <%= link_to '', social_account, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    <% end %>
 
-
-          <!-- <thead>
-            <tr>
-              <th></th>
-              <th></th>
-              <th colspan="3"></th>
-            </tr>
-          </thead> -->
-
-
-          <tbody>
-            <% @social_accounts.each do |social_account| %>
-
-            <div class="card">
-
-                <div class="previev">
-                </div>
-
-                <div class="card_title">
-                  <h3><%= social_account.title %></h3>
-                </div>
-
-                <td><%#= link_to 'Открыть', social_account %></td>
-
-                <div class="edit">
-                  <td><%= link_to 'Из', edit_social_account_path(social_account) %></td>
-                </div>
-
-                <div class="delete">
-                  <td><%= link_to 'Уд', social_account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                </div>
-
-            </div>
-
-            <% end %>
-          </tbody>
-
-            <div class="card">
-              <div class="card_new">
-                <%= link_to 'Новый документ Новый документ Новый документ Новый документНовый документНовый документНовый документНовый документНовый документНовый документ Новый документ Новый документНовый документ', new_social_account_path %>
-              </div>
-
-              <div class="add">
-              </div>
-            </div>
-
-    </section>
+    <div class="card">
+      <div class="card_new">
+        <%= link_to '', new_social_account_path %>
+      </div>
+      <div class="add">
+      </div>
+    </div>
+  </section>
 </section>

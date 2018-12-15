@@ -1,1 +1,172 @@
 
+
+
+<section id="s1" class="main">
+
+  <p id="notice"><%= notice %></p>
+  <h1 class="section_header">Документы</h1>
+
+  <section class="cards_area">
+    <% @documents.each do |document| %>
+      <div class="card">
+        <div class="previev"></div>
+        <div class="card_title">
+          <h3><%= document.title %></h3>
+        </div>
+        <%#= link_to 'Открыть', document %>
+        <div class="edit">
+          <%= link_to '', edit_document_path(document) %>
+        </div>
+        <div class="delete">
+          <%= link_to '', document, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="card">
+      <div class="card_new">
+        <%= link_to '', new_document_path %>
+      </div>
+      <div class="add">
+      </div>
+    </div>
+  </section>
+</section>
+
+
+
+<section id="s2" class="main">
+
+  <p id="notice"><%= notice %></p>
+  <h1 class="section_header">Аккаунты</h1>
+
+  <section class="cards_area">
+    <% @social_accounts.each do |social_account| %>
+      <div class="card">
+        <div class="previev"></div>
+        <div class="card_title">
+          <h3><%= social_account.title %></h3>
+        </div>
+        <%#= link_to 'Открыть', social_account %>
+        <div class="edit">
+          <%= link_to '', edit_social_account_path(social_account) %>
+        </div>
+        <div class="delete">
+          <%= link_to '', social_account, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="card">
+      <div class="card_new">
+        <%= link_to '', new_social_account_path %>
+      </div>
+      <div class="add">
+      </div>
+    </div>
+  </section>
+</section>
+
+
+
+
+<section id="s3" class="main">
+
+  <p id="notice"><%= notice %></p>
+  <h1 class="section_header">Наставления</h1>
+
+  <section class="cards_area">
+    <% @instructions.each do |instruction| %>
+      <div class="card">
+        <div class="previev"></div>
+        <div class="card_title">
+          <h3><%= instruction.title %></h3>
+        </div>
+        <%#= link_to 'Открыть', instruction %>
+        <div class="edit">
+          <%= link_to '', edit_instruction_path(instruction) %>
+        </div>
+        <div class="delete">
+          <%= link_to '', instruction, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="card">
+      <div class="card_new">
+        <%= link_to '', new_instruction_path %>
+      </div>
+      <div class="add">
+      </div>
+    </div>
+  </section>
+</section>
+
+
+
+
+<section id="s4" class="main">
+
+  <p id="notice"><%= notice %></p>
+  <h1 class="section_header">Подписки</h1>
+
+  <section class="cards_area">
+    <% @subscriptions.each do |subscription| %>
+      <div class="card">
+        <div class="previev"></div>
+        <div class="card_title">
+          <h3><%= subscription.title %></h3>
+        </div>
+        <%#= link_to 'Открыть', subscription %>
+        <div class="edit">
+          <%= link_to '', edit_subscription_path(subscription) %>
+        </div>
+        <div class="delete">
+          <%= link_to '', subscription, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="card">
+      <div class="card_new">
+        <%= link_to '', new_subscription_path %>
+      </div>
+      <div class="add">
+      </div>
+    </div>
+  </section>
+</section>
+
+
+
+<section id="s5" class="main">
+
+  <p id="notice"><%= notice %></p>
+  <h1 class="section_header">Кошельки</h1>
+
+  <section class="cards_area">
+    <% @wallets.each do |wallet| %>
+      <div class="card">
+        <div class="previev"></div>
+        <div class="card_title">
+          <h3><%= wallet.title %></h3>
+        </div>
+        <%#= link_to 'Открыть', wallet %>
+        <div class="edit">
+          <%= link_to '', edit_wallet_path(wallet) %>
+        </div>
+        <div class="delete">
+          <%= link_to '', wallet, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="card">
+      <div class="card_new">
+        <%= link_to '', new_wallet_path %>
+      </div>
+      <div class="add">
+      </div>
+    </div>
+  </section>
+</section>

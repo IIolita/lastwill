@@ -1,4 +1,9 @@
-<%= form_with(model: instruction, local: true) do |form| %>
+<div class="container">
+  <div class="instructions">
+
+    <header> <h1>Наставления</h1> </header>
+
+  <%= form_with(model: instruction, local: true) do |form| %>
   <% if instruction.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(instruction.errors.count, "error") %> prohibited this instruction from being saved:</h2>
@@ -11,17 +16,26 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <section class="instructions_area">
+
+  <div class="body">
+    <%= form.text_area :attr, placeholder: "Напишите что-то важное..." %>
   </div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+  <label class="custom-file-upload">
+    <%= form.file_field :cover %>
+  </label>
+
+  <div class="title">
+
+    <h2>Получатели</h2>
+    <%= form.text_field :attr, placeholder: "Перетащите из списка" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Сохранить' %>
   </div>
-<% end %>
+  <% end %>
+</div>
+  </div>
+</section>

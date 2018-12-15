@@ -1,3 +1,7 @@
+<div class="flex-container">
+  <div class="doc">
+
+<header> <h1>Документы</h1> </header>
 <%= form_with(model: document, local: true) do |form| %>
   <% if document.errors.any? %>
     <div id="error_explanation">
@@ -9,26 +13,28 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
+<% end %>
 
+<section class="document_area">
 
-  <div class="field">
-    <%= form.label :cover %>
+  <div class="body">
+    <%= form.text_area :attr, placeholder: "Напишите комментарий..." %>
+  </div>
+
+  <label class="custom-file-upload">
     <%= form.file_field :cover %>
-  </div>
+  </label>
 
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+  <div class="title">
+    <h2>Получатели</h2>
+    <%= form.text_field :attr, placeholder: "Перетащите из списка" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Сохранить' %>
   </div>
 <% end %>
+
+</div>
+  </div>
+    </section>

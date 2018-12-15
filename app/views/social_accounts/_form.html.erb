@@ -11,17 +11,50 @@
     </div>
   <% end %>
 
-  <div class="field">
+
+  <section class="data_output">
+    <h2>Выберите социальную сеть</h2>
+    <select class="network_choice">
+      <optgroup label="Group Name">
+        <option>Facebook</option>
+        <option>В контакте</option>
+        <option>Instagram</option>
+      </optgroup>
+    </select>
+  </section>
+
+
+  <!-- <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
-  </div>
+  </div> -->
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
+  <section class="data_output">
+    <h2>Введите данные</h2>
+    <div class="field">
+      <%#= form.label :Логин %>
+      <%= form.text_area :body, placeholder: "Логин"%>
+    </div>
 
+    <div class="field">
+      <%#= form.label :Пароль %>
+      <%= form.text_area :body, placeholder: "Пароль" %>
+    </div>
+  </section>
+
+
+  <section class="data_output">
+    <h2>Выберите получателя</h2>
+    <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
+      <option value="AL">user1@gmail.com</option>
+      <option value="WY">user2@gmail.com</option>
+    </select>
+  </section>
+
+<section class="data_output">
   <div class="actions">
     <%= form.submit %>
   </div>
+</section>
+
 <% end %>

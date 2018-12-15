@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="wallets">
+
+  <header> <h1>Кошельки</h1> </header>
+<%= form_with(model: wallet, local: true) do |form| %>
+  <% if wallet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(wallet.errors.count, "error") %> prohibited this wallet from being saved:</h2>
+
+      <ul>
+      <% wallet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="choose">
+
+    <h2>Выберите кошелёк</h2>
+    <%= form.text_field :attr, placeholder: "Начните вводить" %>
+  </div>
+
+  <div class="login">
+    <h2>Введите данные</h2>
+  <%= form.text_field :attr, placeholder: "Логин" %>
+    <%= form.text_field :attr, placeholder: "Пароль" %>
+  </div>
+
+  <div class="body">
+    <h2>Добавьте комментарий</h2>
+    <%= form.text_area :attr, placeholder: "Напишите..." %>
+  </div>
+
+  <div class="actions">
+    <h2>Выберите получателя</h2>
+    <%= form.text_field :attr, placeholder: "Перетащите из списка" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Сохранить' %>
+  </div>
+<% end %>
+
+  </div>
+    </div>

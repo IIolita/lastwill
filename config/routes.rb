@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :subscriptions
+  resources :wallets
   root 'transmit#index'
   resources :social_accounts
   resources :instructions
